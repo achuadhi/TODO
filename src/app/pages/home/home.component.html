@@ -1,0 +1,13 @@
+<h1>
+    {{todo}}
+</h1>
+<div class="container mt-5">
+    <div *ngFor ="let item of todo">
+        <div class="d-flex"></div>
+        <input type="checkbox"[checked]="item.completed">&nbsp;&nbsp;&nbsp;
+         <h3 [ngClass]="{cross:item.completed==true}" >{{item.title}}</h3> 
+         <button (click)="deleteitem(item.id)">Delete</button>
+         <button>delete</button>
+         <button>update</button>
+        </div>
+</div>
